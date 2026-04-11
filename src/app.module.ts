@@ -1,12 +1,12 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { ProductsModule } from './products/products.module';
+import { UserController } from './user/user.controller';
 
 @Module({
-  imports: [UsersModule, ProductsModule],
-  controllers: [AppController],
+  imports: [],
+  controllers: [AppController, UserController],
   providers: [AppService],
 })
 export class AppModule {}
